@@ -44,3 +44,4 @@ cd $server_path
     echo "Updating customized files"
     cp -r $server_files_path $server_path
     rm $server_name
+
