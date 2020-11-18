@@ -1,0 +1,9 @@
+SCREEN:
+    ### Activar server ###
+    	screen -S mcs java -Xms1G -Xmx3G -d64 -jar server.jar nogui
+
+    ### Acceder a screen ###
+	    screen -r [name]
+
+    ### Cerrar screen ###
+    	screen -X -S [name] quit

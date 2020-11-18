@@ -1,0 +1,18 @@
+### DESCARGAR EL SERVIDOR DE MINECRAFT: JAVA EDITION ###
+https://www.minecraft.net/es-es/download/server
+
+
+### Servidor ###
+https://console.cloud.google.com/compute/instances?project=healthy-reason-268917&hl=es-419
+
+### Configuración server google ###
+https://cloud.google.com/solutions/gaming/minecraft-server?hl=es-419#create_and_configure_your_instance
+
+### Minecraft wiki servidores ###
+https://minecraft-es.gamepedia.com/Servidores
+
+### Mod edición mapa ###
+https://www.curseforge.com/minecraft/mc-mods/dynmapforge
+
+### Recursos servidor ###
+https://mega.nz/folder/6MUWlaDC#jdCo6NjVUpRpFdZMCJeNeA
