@@ -6,7 +6,7 @@ server_name=$(ls $server_files_path | grep '.jar')
 log_file_name=$(find .. -name '*.log')
 
 cd $server_path
-
+    """
     # Obtener version del servidor 
     rm -rf *
     cp $server_files_path$server_name $server_path
@@ -46,3 +46,4 @@ cd $server_path
     echo "Updating customized configuration files"
     cp -r $server_files_path $server_path
     rm $server_name
+    """

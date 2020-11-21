@@ -1,5 +1,6 @@
 #!/bin/bash
 
+chmod +x ./src/*
 while [ True ]
 do 
     clear
@@ -12,7 +13,7 @@ do
     read option
     case $option in
     1)
-        cd src
+        cd src/
         ./setup.sh
     ;;
     2)
