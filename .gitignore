@@ -2,3 +2,7 @@
 *.rar
 *.tar
 *.zip
+
+# Server #
+
+server/
