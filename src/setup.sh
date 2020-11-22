@@ -3,10 +3,9 @@ source server.config
 
 # Variables globales
 server_name=$(ls $server_files_path | grep '.jar')
-log_file_name=$(find .. -name '*.log')
 
 cd $server_path
-    """
+
     # Obtener version del servidor 
     rm -rf *
     cp $server_files_path$server_name $server_path
@@ -25,9 +24,9 @@ cd $server_path
     screen -dmS mcs java $server_memory_configuration -jar server.jar nogui 
 
     # Espera hasta que se inicie por completo el servidor
-    while [ -z $(cat $log_file_name | grep -o 'Done') ]
+    while [ -z $(cat $(find .. -name 'latest.log') | grep -o 'Done') ]
     do
-        ServerException=$(cat $log_file_name | grep -o 'Exception stopping the server')
+        ServerException=$(cat $(find .. -name 'latest.log') | grep -o 'Exception stopping the server')
         if [ ! -z "$ServerException" ]
         then
             echo "Server exception: Stopping the server" >&2
@@ -46,4 +45,3 @@ cd $server_path
     echo "Updating customized configuration files"
     cp -r $server_files_path $server_path
     rm $server_name
-    """
