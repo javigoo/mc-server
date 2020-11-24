@@ -26,6 +26,7 @@ do
         ;;
         3)
             read -p "Confirm [y/n]: " option
+            echo
             case $option in
                 [Yy]* ) 
                     ./setup.sh
@@ -38,6 +39,7 @@ do
         ;;
         4)
             read -p "Confirm [y/n]: " option
+            echo
             case $option in
                 [Yy]* ) 
                     ./delete-server.sh
