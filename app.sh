@@ -4,9 +4,22 @@ clear
 cd src/
 chmod +x *
 
+confirmation () {
+    read -p "Confirm [y/n]: " option
+    echo
+    case $option in
+        [Yy]*) 
+            $1
+        ;;
+        *) 
+            clear
+            continue
+        ;;
+    esac
+}
+
 while [ True ]
 do 
-    
     echo "|#| MINECRAFT SERVER |#|"
     echo "  [1] Start server"
     echo "  [2] Stop server"
@@ -25,30 +38,10 @@ do
             ./stop-server.sh
         ;;
         3)
-            read -p "Confirm [y/n]: " option
-            echo
-            case $option in
-                [Yy]* ) 
-                    ./setup.sh
-                ;;
-                * ) 
-                    clear
-                    continue
-                ;;
-            esac
+            confirmation "./setup.sh"
         ;;
         4)
-            read -p "Confirm [y/n]: " option
-            echo
-            case $option in
-                [Yy]* ) 
-                    ./delete-server.sh
-                ;;
-                * ) 
-                    clear
-                    continue
-                ;;
-            esac
+            confirmation "./delete-server.sh"
         ;;
         i)
             ./server-status.sh
